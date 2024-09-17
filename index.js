@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+require('dotenv').config();
+
 const { Command } = require("commander");
 const inquirer = require("inquirer");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
@@ -13,7 +15,7 @@ program
   .description("A CLI tool to audit smart contracts using Google's Gemini AI")
   .action(async (file) => {
     try {
-      const apiKey = await getApiKey();
+      const apiKey = process.env.GEMINI_API_KEY;
       const contractPath = path.resolve(process.cwd(), file);
       console.log(`Checking file at path: ${contractPath}`);
 
