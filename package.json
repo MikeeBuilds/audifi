@@ -1,6 +1,6 @@
 {
   "name": "audifi-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ai powered CLI tool for auditing Solidity smart contracts",
   "main": "index.js",
   "bin": {
